@@ -19,8 +19,93 @@ container {
   justify-content: space-between;
 }
 
-.flex-container {
+.profile-image img{
+  height: 40px;
+}
+.parent{
+  display: flex;
+}
+
+/*create dropdown -------------------------*/
+#toggle:checked ~ .dropdown {
+  display: block;
+}
+
+.card {
+  display: block;
+  background: #eef2f4;
+  padding: 12px;
+  width: 260px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Image + Name row */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.info h3, .info p { margin: 0; }
+.info p { color: gray; }
+
+/* Hide checkbox */
+#toggle {
+  display: none;
+}
+
+/* Dropdown hidden */
+.dropdown {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-left: 55px;
+  color: #444;
+}
+
+/* Show dropdown when checkbox checked */
+#toggle:checked ~ .dropdown {
+  display: block;
+}
+
+/* Arrow rotate on open */
+.arrow {
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+#toggle:checked ~ .arrow {
+  transform: rotate(180deg);
+}
+
+/* .down-img{
+  height: 100px;
+  width: 100px;
+} */
+
+
+/* .down-img{
+    width: 150px; 
     display: flex;
-    /* flex-wrap: nowrap; */
-    background-color: DodgerBlue;
+} */
+
+.down-img {
+    width: 250px; /* दोनों की चौड़ाई (Width) 150 पिक्सल होगी */
+    height: 250px; /* दोनों की ऊँचाई (Height) 150 पिक्सल होगी */
+    
+    /* यह महत्वपूर्ण है: यह सुनिश्चित करता है कि छवि पूरी तरह से 
+       दिए गए 'width' और 'height' में फिट हो, भले ही उसका मूल अनुपात अलग हो। */
+    object-fit: cover; 
+    
+    /* 'cover': छवि को काट देगा लेकिन सुनिश्चित करेगा कि पूरा क्षेत्र भरा हुआ है। */
+    /* 'contain': छवि को छोटा कर देगा ताकि वह पूरे क्षेत्र में फिट हो, किनारें खाली रह सकते हैं। */
+    display: flex;
 }
