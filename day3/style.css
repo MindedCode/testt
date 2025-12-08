@@ -1,0 +1,299 @@
+body {
+  background-color: #edf6ed;
+  padding: 10px;
+  color: #eef2f4;
+  color: black;
+}
+
+container {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  background-color: DodgerBlue;
+  padding: 10px;
+  margin: 10px;
+  gap: 35px;
+  align-items: center;
+}
+
+
+
+/* .container img {
+  padding: 10px;
+  margin: 30px;
+  justify-content: space-between;
+} */
+
+.profile-image img {
+  height: 40px;
+}
+
+.parent {
+  display: flex;
+}
+
+/*create dropdown -------------------------*/
+#toggle:checked~.dropdown {
+  display: block;
+}
+
+.card {
+  display: block;
+  background: #eef2f4;
+  padding: 12px;
+  width: 260px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Image + Name row */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.info h3,
+.info p {
+  margin: 0;
+}
+
+.info p {
+  color: gray;
+}
+
+/* Hide checkbox */
+#toggle {
+  display: none;
+}
+
+/* Dropdown hidden */
+.dropdown {
+  display: none;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-left: 100px;
+  color: #444;
+}
+
+/* Show dropdown when checkbox checked */
+#toggle:checked~.dropdown {
+  display: block;
+}
+
+/* Arrow rotate on open */
+.arrow {
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+#toggle:checked~.arrow {
+  transform: rotate(180deg);
+}
+
+.down-img {
+  width: 250px;
+  /* दोनों की चौड़ाई (Width) 150 पिक्सल होगी */
+  height: 250px;
+  /* दोनों की ऊँचाई (Height) 150 पिक्सल होगी */
+
+  /* यह महत्वपूर्ण है: यह सुनिश्चित करता है कि छवि पूरी तरह से 
+       दिए गए 'width' और 'height' में फिट हो, भले ही उसका मूल अनुपात अलग हो। */
+  object-fit: cover;
+
+  /* 'cover': छवि को काट देगा लेकिन सुनिश्चित करेगा कि पूरा क्षेत्र भरा हुआ है। */
+  /* 'contain': छवि को छोटा कर देगा ताकि वह पूरे क्षेत्र में फिट हो, किनारें खाली रह सकते हैं। */
+  display: flex;
+}
+
+
+/* ================================================================================== */
+
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu content ads"
+    "footer footer footer";
+
+  grid-template-columns: 1fr 3fr 1fr;
+  /* 3 columns */
+  gap: 5px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.content {
+  grid-area: content;
+}
+
+.ads {
+  grid-area: ads;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
+.container div {
+  background-color: white;
+  padding: 10px;
+}
+
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+
+.container div.menu {
+  grid-area: menu;
+}
+
+.container div.content {
+  grid-area: content;
+  font-weight: bold;
+}
+
+.container div.footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+/* .container-11 */
+.container-11 {
+  display: flex;
+  background-color: dodgerblue;
+}
+
+.container-11 div {
+  background-color: #f1f1f1;
+  color:#000;
+  width: 200px;
+    height: 175px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  /* font-size: 30px; */
+}
+
+.next-patient-card-header{
+  display: flex;
+}
+
+.patient-name{
+  display: flex;
+}
+.patient-time{
+  display: flex;
+}
+
+/*----------------------Create section --------------------------------------------*/
+.container-2 {
+  display: grid;
+  grid-template-areas:
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+  display: flex;
+  /* padding: 20px; */
+  /* align-items: center; */
+  /* background-color: rgb(184, 85, 102); */
+  /* text-align: center; */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Yeh selector keval un 'a' tags ko target karega 
+   jo kisi 'div' ke andar hain, aur woh 'div' kisi 'section' ke andar hai. */
+
+.manu-item-table img,
+.manu-item-table a {
+  /* Dono elements par 'vertical-align: middle' lagana zaroori hai! */
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.manu-item-table a {
+  /* Anchor tag ki underline hata do */
+  /* text-decoration: none; */
+  /* Optional: Icon aur text ke beech thoda space */
+  margin-left: 5px;
+  /* color: #333; */
+  /* Default text color set karein */
+}
+
+section div a {
+  text-decoration: none;
+}
+
+.emergency img {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.emergency {
+  /* align-items: center; */
+  color: rgb(9, 8, 0);
+  text-decoration: none;
+  /* padding-left: 20px; */
+  display: flex;
+
+}
+
+table {
+  font-weight: 100;
+}
+
+table tr th {
+  font-weight: bold;
+}
+
+
+.dashbord {
+  color: rgb(101, 244, 96);
+  padding-left: 0px;
+  text-decoration: none;
+
+}
+
+.contrast-eye {
+  color: sandybrown;
+  padding-left: 20px;
+  text-decoration: none;
+
+
+}
+
+.ficon {
+  font-size: 15px;
+  padding-right: 10px;
+  color: rgb(205, 194, 194);
+  align-content: center;
+  display: flex;
+}
+
+.fsize {
+  color: rgb(120, 5, 207);
+  text-align: end;
+  text-decoration: none;
+  display: flex;
+  padding-left: 25px;
+}
