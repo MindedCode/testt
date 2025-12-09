@@ -3,15 +3,240 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f5f7fb;
+            padding: 40px;
+        }
+
+        .search-wrapper {
+            width: 520px;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 40px;
+            padding: 0 14px 0 34px;
+            /* space for icon */
+            border-radius: 20px;
+            border: 1px solid #e0e4ee;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);
+            outline: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .search-input::placeholder {
+            color: #b3b8c5;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #c4c9d6;
+        }
+
+        .search-icon::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 2px;
+            background: #c4c9d6;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            right: -4px;
+            bottom: -1px;
+        }
+
+        /* body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f5f7fb;
+            padding: 40px;
+        } */
+
+        .doctor-wrapper {
+            width: 420px;
+        }
+
+        .doctor-row {
+            display: flex;
+            align-items: center;
+            background: #f6f8fc;
+            border-radius: 12px;
+            padding: 8px 14px;
+            cursor: pointer;
+            box-shadow: 0 0 0 1px rgba(215, 221, 233, 0.9);
+        }
+
+        .avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-right: 12px;
+            background: #dbe7f7;
+            flex-shrink: 0;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .doc-info {
+            flex: 1;
+        }
+
+        .doc-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2px;
+        }
+
+        .doc-role {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #7e8693;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 7px solid #9ea5b2;
+            transition: transform 0.2s ease;
+        }
+
+        /* dropdown area */
+        .dropdown {
+            display: none;
+            width: 420px;
+            background: #ffffff;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            padding: 10px 16px 12px;
+            font-size: 13px;
+            color: #444;
+        }
+
+        .dropdown h4 {
+            margin: 0 0 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .dropdown ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .dropdown li {
+            margin-bottom: 4px;
+        }
+
+        .doctor-wrapper.open .dropdown {
+            display: block;
+        }
+
+        .doctor-wrapper.open .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <img src="/img/mic.png" height="20px"><a href="#">Dashboard</a><br>
+    <div class="search-wrapper">
+        <div class="search-container">
+            <span class="search-icon"></span>
+            <input class="search-input" type="text" placeholder="Search parients or doctors">
+        </div>
     </div>
-</body>
+
+    <div class="search-wrapper-1">
+        <div class="search-container-1">
+            <span class="search-icon-1"></span>
+            <input class="search-input-1" type="text" placeholder="Ka dhudat hau re!">
+        </div>
+    </div>
+
+    <div class="doctor-wrapper" id="docRow">
+        <div class="doctor-row">
+            <div class="avatar">
+                <!-- replace with real image if you want -->
+                <img src="https://via.placeholder.com/80x80.png?text=Dr" alt="Doctor">
+            </div>
+
+            <div class="doc-info">
+                <div class="doc-name">Nicholas Doyle</div>
+                <div class="doc-role">SURGEON</div>
+            </div>
+
+            <div class="arrow"></div>
+        </div>
+
+        <div class="dropdown">
+            <h4>Doctor details</h4>
+            <ul>
+                <li>Hospital: Sunrise General Hospital</li>
+                <li>Experience: 12 years in general surgery</li>
+                <li>Next available: 15 Dec, 10:30 AM</li>
+                <li>Contact: nicholas.doyle@example.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- create dropdown----------------------- -->
+<div class="doctor-wrapper-1" id="docRow1">
+    <div class="doctor-row1">
+        <div class="avatar-role-box">
+        <div class="avatar-1">
+            <!--  -->
+            <img src="/img/doctor.png" height="60px" alt="Doctor">
+        </div>
+        <div class="doc-info-1">
+            <div class="doc-name-1">Nicholas Doyle</div>
+            <div class="doc-role-1">SURGEON</div>
+        </div>
+        </div>
+        <div class="arrow-1"></div>
+        <div class="dropdown-1">
+            <h4>Doctors details</h4>
+            <ul>
+                <li>Hospital: Sunrise General Hospital</li>
+                <li>Experience: 12 years in general surgery</li>
+                <li>Next available: 15 Dec, 10:30 AM</li>
+                <li>Contact: nicholas.doyle@example.com</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+        const docRow = document.getElementById('docRow');
+        docRow.addEventListener('click', () => {
+            docRow.classList.toggle('open');
+        });
+
+        const docRow1 = document.getElementById('docRow1');
+        docRow1.addEventListener('click', () => {
+            docRow1.classList.toggle('open');
+        });
+    </script>
 
 </html>

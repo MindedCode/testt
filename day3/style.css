@@ -1,6 +1,8 @@
 body {
   background-color: #edf6ed;
-  padding: 10px;
+  /* padding: 10px; */
+  height: 1000px;
+  max-width: 1500px;
   color: #eef2f4;
   color: black;
 }
@@ -9,19 +11,184 @@ container {
   display: flex;
   /* flex-wrap: nowrap; */
   background-color: DodgerBlue;
-  padding: 10px;
-  margin: 10px;
+  /* padding: 10px; */
+  /* margin: 10px; */
   gap: 35px;
   align-items: center;
 }
 
+/* create search icon---------------------------------- */
 
+div0 {
+  color: red;
+  /* background-color: rebeccapurple; */
+  border: 2px solid rebeccapurple;
+}
 
-/* .container img {
-  padding: 10px;
-  margin: 30px;
-  justify-content: space-between;
-} */
+.search-wrapper-1 {
+  width: 520px;
+  background-color: red;
+  border: 2px solid rgb(34, 255, 0);
+  border-radius: 25px;
+}
+
+.search-input-1 {
+  width: 100%;
+  height: 30px;
+  padding: 6px 10px 0px 36px;
+  /*space for icon*/
+  border-radius: 10px;
+  /*search bar radius.*/
+  border: 2px solid rgb(236, 220, 220);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+  outline: none;
+  font-size: 13px;
+  color: #333;
+}
+
+.search-input-1::placeholder {
+  color: #b3b8c5;
+}
+
+.search-container-1 {
+  /* border: 3px dotted yellow; */
+  position: relative;
+}
+
+.search-icon-1 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #c4c9d6;
+}
+
+.search-icon-1::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  background: #c4c9d6;
+  border-radius: 2px;
+  transform: rotate(47deg);
+  right: -4px;
+  bottom: -2px;
+}
+
+/* end search icon------------------------------------------ */
+form {
+  padding-left: 200px;
+  display: flex;
+}
+
+/* Notification bell. -------------- */
+.notification-bell {
+  /* border: 2px solid forestgreen; */
+  padding-left: 100px;
+  height: 30px;
+}
+
+/* Create Dropdown----------------------------- */
+.doctor-wrapper-1 {
+  width: 420px;
+  /* border: 2px dotted red; */
+}
+
+.doctor-row1 {
+  /* border: 4px double green; */
+  display: flex;
+  align-items: center;
+  background: #f6f8fc;
+  border-radius: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(215, 221, 233, 0.9);
+}
+
+.avatar-1 {
+  /* border: 2px dotted red; */
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 12px;
+  background: #dbe7f7;
+  flex-shrink: 0;
+}
+
+.avatar-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doc-info-1 {
+  flex: 1;
+}
+
+.doc-name-1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.doc-role-1 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #7e8693;
+}
+
+.arrow-1 {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #9ea5b2;
+  transition: transform 0.2s ease;
+}
+
+/* dropdown area */
+.dropdown-1 {
+  display: none;
+  width: 420px;
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 10px 16px 12px;
+  font-size: 13px;
+  color: #444;
+}
+
+.dropdown-1 h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.dropdown-1 ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.dropdown-1 li {
+  margin-bottom: 4px;
+}
+
+.doctor-wrapper-1.open .dropdown-1 {
+  display: block;
+}
+
+.doctor-wrapper-1.open .arrow-1 {
+  transform: rotate(180deg);
+}
+
+/* end dropdown-------------------------------------- */
+
 
 .profile-image img {
   height: 40px;
@@ -181,23 +348,24 @@ container {
 
 .container-11 div {
   background-color: #f1f1f1;
-  color:#000;
+  color: #000;
   width: 200px;
-    height: 175px;
+  height: 175px;
   margin: 10px;
   padding: 10px;
   text-align: center;
   /* font-size: 30px; */
 }
 
-.next-patient-card-header{
+.next-patient-card-header {
   display: flex;
 }
 
-.patient-name{
+.patient-name {
   display: flex;
 }
-.patient-time{
+
+.patient-time {
   display: flex;
 }
 

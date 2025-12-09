@@ -12,89 +12,43 @@
     <header>
         <container>
             <form action="/search" method="GET">
-                <input type="search" placeholder="Kya dhundh r h?" name="q">
-                <button type="submit">Search</button>
+                <div class="search-wrapper-1">
+                    <div class="search-container-1">
+                        <span class="search-icon-1"></span>
+                        <input class="search-input-1" type="text" placeholder="Ka dhudat hau re! Dr/Patient">
+                    </div>
+                </div>
             </form>
-            <img src="/img/notification-bell_5817858.png" height="20px" alt="Notification-Bell" />
-            <div class="profile-card">
-                <div class="parent">
-
-                    <div class="profile-image">
-
-                        <img src="/img/doctor.png" alt="Doctor Profile Picture">
+            <img class="notification-bell" src="/img/notification-bell_5817858.png" alt="Notification-Bell" />
+            <!-- create dropdown----------------------- -->
+            <div class="doctor-wrapper-1" id="docRow1">
+                <div class="doctor-row1">
+                    <div class="avatar-1">
+                        <!--  -->
+                        <img src="/img/doctor.png" height="60px" alt="Doctor">
                     </div>
-
-                    <div>
-                        <input type="checkbox" id="toggle">
+                    <div class="doc-info-1">
+                        <div class="doc-name-1">Nicholas Doyle</div>
+                        <div class="doc-role-1">SURGEON</div>
                     </div>
-                    <div class="box-1">
-                        <div class="profile-imfo">Nicholas Doyle</div>
-                        <div class="profile-title">SURGEON</div>
-                    </div>
-                    <div class="dropdown-arrow">
-                        &#x2304;
+                    <div class="arrow-1"></div>
+                    <div class="dropdown-1">
+                        <h4>Doctors details</h4>
+                        <ul>
+                            <li>Hospital: Sunrise General Hospital</li>
+                            <li>Experience: 12 years in general surgery</li>
+                            <li>Next available: 15 Dec, 10:30 AM</li>
+                            <li>Contact: nicholas.doyle@example.com</li>
+                        </ul>
                     </div>
                 </div>
-                <label for="drs">Choose a dr:</label>
-                <select name="drs" id="cars">
-                    <option value="surgeon1">
-                        <div class="box-1">
-                            <div class="profile-imfo">Nicholas Doyle</div>
-                            <div class="profile-title">- SURGEON</div>
-                        </div>
-                    </option>
-                    <option value="surgeon2">
-                        <div class="box-1">
-                            <div class="profile-imfo">Nicholas Doyle</div>
-                            <div class="profile-title">- SURGEON</div>
-                        </div>Saab
-                    </option>
-                    <option value="3">
-                        <div class="box-1">
-                            <div class="profile-imfo">Nicholas Doyle</div>
-                            <div class="profile-title">- SURGEON</div>
-                        </div>
-                    </option>
-                    <option value="4">
-                        <div class="box-1">
-                            <div class="profile-imfo">Nicholas Doyle</div>
-                            <div class="profile-title">- SURGEON</div>
-                        </div>
-                    </option>
-                </select>
             </div>
-            <label class="card">
-                <input type="checkbox" id="toggle">
-
-                <img src="/img/doctor.png" class="avatar">
-
-                <div class="info">
-                    <h3>Nicholas Doyle</h3>
-                    <p>SURGEON</p>
-                </div>
-
-                <span class="arrow">⌄</span>
-
-                <div class="dropdown">
-                    <p>Experience: 10 years</p>
-                    <p>Speciality: Surgery</p>
-                </div>
-                <!-- ----------------------- -->
-                <img src="/img/doctor.png" class="avatar">
-
-                <div class="info">
-                    <h3>Nicholas Doyle</h3>
-                    <p>SURGEON</p>
-                </div>
-
-                <span class="arrow">⌄</span>
-
-                <div class="dropdown">
-                    <p>Experience: 10 years</p>
-                    <p>Speciality: Surgery</p>
-                </div>
-            </label>
-
+            <script>
+                const docRow1 = document.getElementById('docRow1');
+                docRow1.addEventListener('click', () => {
+                    docRow1.classList.toggle('open');
+                });
+            </script>
         </container>
         <section>
             <div class="container">
