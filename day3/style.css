@@ -87,13 +87,13 @@ form {
 /* Notification bell. -------------- */
 .notification-bell {
   /* border: 2px solid forestgreen; */
-  padding-left: 100px;
+  padding-left: 175px;
   height: 30px;
 }
 
 /* Create Dropdown----------------------------- */
 .doctor-wrapper-1 {
-  width: 420px;
+  width: 300px;
   /* border: 2px dotted red; */
 }
 
@@ -111,7 +111,7 @@ form {
 
 /* popup id---------------------------- */
 .popup{
-  width: 100%;
+  /* width: 100%; */
 }
 
 .avatar-1 {
@@ -164,12 +164,14 @@ form {
   left: 0;
   position: absolute;
   display: none;
+  width: 300px;
   /* width: 100%; */
+  
   background: #ffffff;
   border-radius: 8px;
   /* box-shadow: 8px 6px 18px rgba(0, 0, 0, 0.10); */
   box-shadow: 15px #060606;
-  padding: 10px 16px 12px;
+  padding: 10px;
   font-size: 13px;
   color: #444;
 

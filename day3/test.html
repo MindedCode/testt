@@ -68,7 +68,7 @@
         } */
 
         .doctor-wrapper {
-            width: 420px;
+            width: 300px;
         }
 
         .doctor-row {
@@ -126,7 +126,7 @@
         /* dropdown area */
         .dropdown {
             display: none;
-            width: 420px;
+            width: 300px;
             background: #ffffff;
             border-radius: 0 0 12px 12px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
@@ -204,29 +204,27 @@
 
     <!-- create dropdown----------------------- -->
     <div class="doctor-wrapper-1" id="docRow1">
-        <div class="doctor-row1">
-            <div class="avatar-role-box">
-                <div class="avatar-1">
-                    <!--  -->
-                    <img src="/img/doctor.png" height="60px" alt="Doctor">
-                </div>
-                <div class="doc-info-1">
-                    <div class="doc-name-1">Nicholas Doyle</div>
-                    <div class="doc-role-1">SURGEON</div>
+                <div class="doctor-row1">
+                    <div class="avatar-1">
+                        <!--  -->
+                        <img src="/img/doctor.png" height="60px" alt="Doctor">
+                    </div>
+                    <div class="doc-info-1">
+                        <div class="doc-name-1">Nicholas Doyle</div>
+                        <div class="doc-role-1">SURGEON</div>
+                    </div>
+                    <div class="arrow-1"></div>
+                    <div class="dropdown-1" id="popup">
+                        <h4>Doctors details</h4>
+                        <ul>
+                            <li>Hospital: Sunrise General Hospital</li>
+                            <li>Experience: 12 years in general surgery</li>
+                            <li>Next available: 15 Dec, 10:30 AM</li>
+                            <li>Contact: nicholas.doyle@example.com</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="arrow-1"></div>
-            <div class="dropdown-1" id="openBtn">
-                <h4>Doctors details</h4>
-                <ul>
-                    <li>Hospital: Sunrise General Hospital</li>
-                    <li>Experience: 12 years in general surgery</li>
-                    <li>Next available: 15 Dec, 10:30 AM</li>
-                    <li>Contact: nicholas.doyle@example.com</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <!-- <div>
         <div class="container">
@@ -246,7 +244,10 @@
         });
 
         const docRow1 = document.getElementById('docRow1');
+        const popup = document.getElementById('popup');
         docRow1.addEventListener('click', () => {
+            popup.style.width = docRow1.offsetWidth + "px";
+            popup.style.display = popup.style.display === "block" ? "none" : "block";
             docRow1.classList.toggle('open');
         });
 
