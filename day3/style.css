@@ -98,7 +98,8 @@ form {
 }
 
 .doctor-row1 {
-  /* border: 4px double green; */
+  border: 4px double green;
+  position: relative;
   display: flex;
   align-items: center;
   background: #f6f8fc;
@@ -106,6 +107,11 @@ form {
   padding: 8px 14px;
   cursor: pointer;
   box-shadow: 0 0 0 1px rgba(215, 221, 233, 0.9);
+}
+
+/* popup id---------------------------- */
+.popup{
+  width: 100%;
 }
 
 .avatar-1 {
@@ -153,14 +159,21 @@ form {
 
 /* dropdown area */
 .dropdown-1 {
+  z-index: 10;
+  top:100%;
+  left: 0;
+  position: absolute;
   display: none;
-  width: 420px;
+  /* width: 100%; */
   background: #ffffff;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  /* box-shadow: 8px 6px 18px rgba(0, 0, 0, 0.10); */
+  box-shadow: 15px #060606;
   padding: 10px 16px 12px;
   font-size: 13px;
   color: #444;
+
+  border: 2px solid red;
 }
 
 .dropdown-1 h4 {
@@ -180,7 +193,7 @@ form {
 }
 
 .doctor-wrapper-1.open .dropdown-1 {
-  display: block;
+  /* display: block; */
 }
 
 .doctor-wrapper-1.open .arrow-1 {
