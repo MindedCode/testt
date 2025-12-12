@@ -9,11 +9,7 @@ body {
 
 container {
   display: flex;
-  /* flex-wrap: nowrap; */
-  /* background-color: DodgerBlue; */
   background: #f6f8fc;
-  /* padding: 10px; */
-  /* margin: 10px; */
   gap: 35px;
   align-items: center;
 }
@@ -22,29 +18,31 @@ container {
 
 div0 {
   color: red;
-  /* background-color: rebeccapurple; */
   border: 2px solid rebeccapurple;
 }
 
 .search-wrapper-1 {
   width: 520px;
-  /* background-color: red; */
-  /* border: 2px solid rgb(34, 255, 0); */
   border-radius: 25px;
 }
 
 .search-input-1 {
   width: 100%;
   height: 20px;
-  padding: 4px 10px 0px 35px;
+  padding: 4px 14px 3px 50px;
   /*space for icon*/
   border-radius: 10px;
   /*search bar radius.*/
   border: 2px solid rgb(236, 220, 220);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
   outline: none;
-  font-size: 12px;
+  font-size: 13px;
   color: #333;
+}
+
+.search-input-1:hover {
+  background-color: rgb(251, 255, 249);
+
 }
 
 .search-input-1::placeholder {
@@ -58,7 +56,7 @@ div0 {
 
 .search-icon-1 {
   position: absolute;
-  left: 10px;
+  left: 17px;
   top: 50%;
   transform: translateY(-50%);
   width: 10px;
@@ -86,11 +84,30 @@ form {
 }
 
 /* Notification bell. -------------- */
-.notification-bell {
-  /* border: 2px solid forestgreen; */
-  padding-left: 175px;
-  height: 20px;
+.bell {
+  padding-left: 200px;
+  height: 15px;
+  cursor: pointer;
+  /* border: 2px solid transparent; */
+  transition: transform .3s;
 }
+
+.bell:hover {
+  transform: scale(1.01);
+}
+
+/* .bell-btn {
+  padding-left: 50px; 
+  z-index: 100;
+    width: 26px;
+    height: 26px;
+    background: url('/img/notification-bell_5817858.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    border: 3px dotted red;
+} */
+
 
 /* Create Dropdown----------------------------- */
 .doctor-wrapper-1 {
@@ -99,15 +116,15 @@ form {
 }
 
 .doctor-row1 {
-  /* border: 4px double green; */
   position: relative;
   display: flex;
   align-items: center;
   background: #f6f8fc;
-  /* border-radius: 12px; */
-  padding: 8px 14px;
+  padding: 24px 1px;
   cursor: pointer;
-  /* box-shadow: 0 0 0 1px rgba(215, 221, 233, 0.9); */
+}
+.doctor-row1:hover{
+  background: #d7d9db59;
 }
 
 /* popup id---------------------------- */
@@ -117,13 +134,14 @@ form {
 
 .avatar-1 {
   /* border: 2px dotted red; */
-  width: 46px;
-  height: 46px;
+  width: 35px;
+  height: 35px;
   border-radius: 12px;
   overflow: hidden;
   margin-right: 12px;
   background: #dbe7f7;
   flex-shrink: 0;
+
 }
 
 .avatar-1 img {
@@ -137,7 +155,7 @@ form {
 }
 
 .doc-name-1 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #222;
   margin-bottom: 2px;
@@ -152,14 +170,15 @@ form {
 .arrow-1 {
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 7px solid #9ea5b2;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #9ea5b2;
   transition: transform 0.2s ease;
+  margin-right:8px;
 }
 
 /* dropdown area */
-.doctor-row,
+.doctor-row1,
 .dropdown {
   width: 100%;
 }
@@ -183,6 +202,7 @@ form {
 
   border: 2px solid red;
 }
+
 
 .dropdown-1 h4 {
   margin: 0 0 6px;
@@ -485,4 +505,20 @@ table tr th {
   text-decoration: none;
   display: flex;
   padding-left: 25px;
+}
+
+
+.arrow-2 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid red;
+  border-right: 15px solid greenyellow;
+  border-top: 16px solid #9ea5b2;
+  border-bottom: 16px solid yellow;
+}
+.parents{
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;       /* vertical center (optional) */
+  height: 100px; 
 }
