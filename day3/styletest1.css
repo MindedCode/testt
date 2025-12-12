@@ -1,0 +1,91 @@
+.doctor-wrapper {
+            width: 300px;
+        }
+
+        .doctor-row {
+            display: flex;
+            align-items: center;
+            background: #f6f8fc;
+            border-radius: 12px;
+            padding: 8px 14px;
+            cursor: pointer;
+            box-shadow: 0 0 0 1px rgba(215, 221, 233, 0.9);
+        }
+
+        .avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-right: 12px;
+            background: #dbe7f7;
+            flex-shrink: 0;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .doc-info {
+            flex: 1;
+        }
+
+        .doc-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2px;
+        }
+
+        .doc-role {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #7e8693;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 7px solid #9ea5b2;
+            transition: transform 0.2s ease;
+        }
+
+        /* dropdown area */
+        .dropdown {
+            display: none;
+            width: 300px;
+            background: #ffffff;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            padding: 10px 16px 12px;
+            font-size: 13px;
+            color: #444;
+        }
+
+        .dropdown h4 {
+            margin: 0 0 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .dropdown ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .dropdown li {
+            margin-bottom: 4px;
+        }
+
+        .doctor-wrapper.open .dropdown {
+            display: block;
+        }
+
+        .doctor-wrapper.open .arrow {
+            transform: rotate(180deg);
+        }
