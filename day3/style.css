@@ -123,7 +123,8 @@ form {
   padding: 24px 1px;
   cursor: pointer;
 }
-.doctor-row1:hover{
+
+.doctor-row1:hover {
   background: #d7d9db59;
 }
 
@@ -174,7 +175,7 @@ form {
   border-right: 5px solid transparent;
   border-top: 6px solid #9ea5b2;
   transition: transform 0.2s ease;
-  margin-right:8px;
+  margin-right: 8px;
 }
 
 /* dropdown area */
@@ -193,14 +194,14 @@ form {
   /* width: 100%; */
 
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 5px;
   /* box-shadow: 8px 6px 18px rgba(0, 0, 0, 0.10); */
   box-shadow: 15px #060606;
   padding: 10px;
   font-size: 13px;
   color: #444;
 
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 
@@ -305,6 +306,11 @@ form {
   transform: rotate(180deg);
 }
 
+/* senction 2 ------------------------------------------------- */
+.content-11 {
+  border: 3px dotted red;
+}
+
 .down-img {
   width: 250px;
   /* दोनों की चौड़ाई (Width) 150 पिक्सल होगी */
@@ -325,6 +331,7 @@ form {
 
 
 .container {
+  border: 3px double red;
   display: grid;
   grid-template-areas:
     "header header header"
@@ -338,6 +345,51 @@ form {
 
 .header {
   grid-area: header;
+  border: 2px dotted red;
+}
+
+
+/* Emergency container------------------ */
+
+.emergency {
+  /* align-items: center; */
+  color: rgb(9, 8, 0);
+  text-decoration: none;
+  /* padding-left: 20px; */
+  display: flex;
+  align-items: center;
+  /* border: 4px dotted rgb(255, 0, 221); */
+
+}
+
+.emergency-1 {
+  display: flex;
+  /* border: 35px solid black; */
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+
+  width: 100px;
+  margin-right: 100px;
+  z-index: 100;
+  
+}
+
+.emergency-1 img{
+  width: 15px;
+  height: 17px;
+  background-color: #ddcdcd;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+    filter: hue-rotate(90deg) brightness(1.2);
+    fill: white;
+  
+}
+
+.dashbord{
+  border: 3px dotted black;
 }
 
 .menu {
@@ -359,7 +411,7 @@ form {
 
 .container div {
   background-color: white;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .container div.header {
@@ -412,15 +464,15 @@ form {
 
 /*----------------------Create section --------------------------------------------*/
 .container-2 {
-  display: grid;
-  grid-template-areas:
-    "menu content"
-    "footer footer";
-  grid-template-columns: 1fr 2fr;
-  gap: 3px;
-  background-color: dodgerblue;
-  padding: 5px;
-  display: flex;
+  /* display: grid; */
+  /* grid-template-areas: */
+  /* "menu content" */
+  /* "footer footer"; */
+  /* grid-template-columns: 1fr 2fr; */
+  /* gap: 3px; */
+  /* background-color: dodgerblue; */
+  /* padding: 5px; */
+  /* display: flex; */
   /* padding: 20px; */
   /* align-items: center; */
   /* background-color: rgb(184, 85, 102); */
@@ -458,16 +510,9 @@ section div a {
   padding-right: 13px;
 }
 
-.emergency {
-  /* align-items: center; */
-  color: rgb(9, 8, 0);
-  text-decoration: none;
-  /* padding-left: 20px; */
-  display: flex;
 
-}
 
-table {
+img table {
   font-weight: 100;
 }
 
@@ -516,9 +561,12 @@ table tr th {
   border-top: 16px solid #9ea5b2;
   border-bottom: 16px solid yellow;
 }
-.parents{
+
+.parents {
   display: flex;
-  justify-content: center;  /* horizontal center */
-  align-items: center;       /* vertical center (optional) */
-  height: 100px; 
+  justify-content: center;
+  /* horizontal center */
+  align-items: center;
+  /* vertical center (optional) */
+  height: 100px;
 }
