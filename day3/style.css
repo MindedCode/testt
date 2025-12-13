@@ -96,19 +96,6 @@ form {
   transform: scale(1.01);
 }
 
-/* .bell-btn {
-  padding-left: 50px; 
-  z-index: 100;
-    width: 26px;
-    height: 26px;
-    background: url('/img/notification-bell_5817858.png') no-repeat center center;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    border: 3px dotted red;
-} */
-
-
 /* Create Dropdown----------------------------- */
 .doctor-wrapper-1 {
   width: 300px;
@@ -190,18 +177,13 @@ form {
   left: 0;
   position: absolute;
   display: none;
-  /* width: 200px; */
-  /* width: 100%; */
-
   background: #ffffff;
   border-radius: 5px;
-  /* box-shadow: 8px 6px 18px rgba(0, 0, 0, 0.10); */
   box-shadow: 15px #060606;
   padding: 10px;
   font-size: 13px;
   color: #444;
 
-  /* border: 2px solid red; */
 }
 
 
@@ -373,22 +355,20 @@ form {
   width: 100px;
   margin-right: 100px;
   z-index: 100;
-  
+
 }
 
-.emergency-1 img{
+.emergency-1 img {
   width: 15px;
   height: 17px;
-  background-color: #ddcdcd;
+  background-color: rgb(0,0, 0);
   padding: 10px 10px;
   border-radius: 10px;
   margin-right: 20px;
-    filter: hue-rotate(90deg) brightness(1.2);
-    fill: white;
-  
+  /* border: 3px dotted blue; */
 }
 
-.dashbord{
+.dashbord {
   border: 3px dotted black;
 }
 
@@ -464,20 +444,7 @@ form {
 
 /*----------------------Create section --------------------------------------------*/
 .container-2 {
-  /* display: grid; */
-  /* grid-template-areas: */
-  /* "menu content" */
-  /* "footer footer"; */
-  /* grid-template-columns: 1fr 2fr; */
-  /* gap: 3px; */
-  /* background-color: dodgerblue; */
-  /* padding: 5px; */
-  /* display: flex; */
-  /* padding: 20px; */
-  /* align-items: center; */
-  /* background-color: rgb(184, 85, 102); */
-  /* text-align: center; */
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
